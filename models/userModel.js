@@ -16,10 +16,11 @@ const userSchema = new mongoose.Schema({
   permanentAddress1: { type: String },
   permanentAddress2: { type: String },
   files: [{
-    name: { type: String ,required:true},
-    type: { type: String,required:true },
-    file: { type: String,required:true  },
+    name: { type: String },
+    type: { type: String },
+    file: { type: String  },
   }]
+  // files:[{type:String}],
 },
   {
     timestamps: true,
