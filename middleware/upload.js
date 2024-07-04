@@ -4,11 +4,11 @@ const storage = multer.diskStorage({
   
   
   destination: (req, res, next) => {
-    next(null, path.join(__dirname, "../public/users"));
+    // next(null, path.join(__dirname, "../public/users"));
   },
-  // destination: function (req, file, cb) {
-  //   cb(null, 'uploads/users'); 
-  // },
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/users'); 
+  },
   filename: (req, file, next) => {
     next(null,file.originalname);
   },
